@@ -26,6 +26,9 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
           git remote set-url origin https://user:$HF_TOKEN@huggingface.co/spaces/vibhoragg/Math_Problem_Solver
+          git fetch origin main
+          git reset --soft origin/main  # Align with remote changes
           git add .
-          git commit -m "Sync to Hugging Face Hub" || echo "No changes to commit"
-          git push origin main
+          git commit -m "Sync with Hugging Face Hub" || echo "No changes to commit"
+          git push origin main --force
+
