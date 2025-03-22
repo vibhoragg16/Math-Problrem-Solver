@@ -27,3 +27,4 @@ duckduckgo-search
 youtube_transcript_api
 unstructured
 streamlit
+numexpr
